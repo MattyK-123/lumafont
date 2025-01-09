@@ -1,6 +1,5 @@
 # Lumafont
 
-## Overview
 Lumafont is a Python application that processes a user-provided font to render all ASCII characters and calculate their luminance values. This tool is designed for developers, graphic designers, and enthusiasts interested in analyzing or utilizing ASCII art and typography in applications such as visualizations, games, and creative projects.
 
 ## Features
