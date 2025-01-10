@@ -42,7 +42,9 @@ python lumafont.py -f <font-file-path> [-s <font-size>] [-i <width> <height>] [-
 - `-d, --disable-output`: Disable saving the rendered images and luminance report.
 - `-p, --pretty-print`: Print the luminance report as a table instead of CSV.
 
-### Luminance Calculation
+---
+
+## Luminance Calculation
 
 The luminance of each character is calculated as follows:
 
@@ -164,7 +166,7 @@ python lumafont.py -f fonts/arial.ttf -o .\output -i 64 64 -s 16
 |     ~     |  0.01245  |
 +-----------+-----------+
 ```
-## Sample Images
+### Sample Images
 
 Here are some sample images rendered using the Arial Regular font:
 
@@ -263,8 +265,6 @@ Here are some sample images rendered using the Arial Regular font:
 ![Character 124](./output/Arial%20Regular/124.png)
 ![Character 125](./output/Arial%20Regular/125.png)
 ![Character 126](./output/Arial%20Regular/126.png)
-
-
 
 ## Output
 
