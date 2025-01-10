@@ -42,8 +42,6 @@ python lumafont.py -f <font-file-path> [-s <font-size>] [-i <width> <height>] [-
 - `-d, --disable-output`: Disable saving the rendered images and luminance report.
 - `-p, --pretty-print`: Print the luminance report as a table instead of CSV.
 
----
-
 ## Luminance Calculation
 
 The luminance of each character is calculated as follows:
