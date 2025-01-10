@@ -1,8 +1,9 @@
 import os
+import csv
 import numpy as np
+from PIL import ImageFont
 from .renderer import Renderer
 from prettytable import PrettyTable
-from PIL import ImageFont
 
 
 class Reporter:
@@ -47,5 +48,9 @@ class Reporter:
 
         named_outputfile = os.path.join(named_output_path, "luminance_report.csv")
 
-        with open(named_outputfile, "w") as file:
-            file.write(self._get_luminance_report())
+        with open(named_outputfile, "w", newline="\n") as file:
+            csv_file = csv.DictWriter(file, fieldnames=["Character", "Luminance"], quoting=csv.QUOTE_NONE, delimiter="\t", escapechar="\\")
+            csv_file.writeheader()
+            
+            for char, luminance in self.luminance_values.items():
+                csv_file.writerow({"Character": char, "Luminance": "{:.5f}".format(luminance)})
