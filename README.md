@@ -52,7 +52,7 @@ python lumafont.py -f fonts/arial.ttf -o .\output -i 64 64 -s 16
 
 ### Example Output:
 
-```bash
+```text
 +-----------+-----------+
 | Character | Luminance |
 +-----------+-----------+
