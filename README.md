@@ -42,6 +42,17 @@ python lumafont.py -f <font-file-path> [-s <font-size>] [-i <width> <height>] [-
 - `-d, --disable-output`: Disable saving the rendered images and luminance report.
 - `-p, --pretty-print`: Print the luminance report as a table instead of CSV.
 
+### Luminance Calculation
+
+The luminance of each character is calculated as follows:
+
+- Each character is rendered on a 1-bit image with a black background.
+- The rendered image is analyzed pixel by pixel.
+- The mean of all the pixels in the image is computed, where each pixel is either light (1) or dark (0).
+- The resulting value represents the ratio of light pixels to dark pixels, providing the luminance value.
+
+This method ensures that the luminance values are normalized and accurately represent the visual "brightness" of each character.
+
 ### Example:
 
 Render ASCII characters using `Arial.ttf`, save outputs to `./outputs`, and pretty print the luminance report:
